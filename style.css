@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(to right, rgb(163, 106, 13), rgb(255, 123, 0), rgb(255, 102, 0));
+}
+.nav-menu{
+    width: 0px;
+    height: 0px;
+}
+.links{
+    position: absolute;
+    right: 10px;
+}
+.logo i{
+    margin: 5px;
+    
+}
+.links ul {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.link-item {
+    display: block;
+    list-style: none;
+    width: 96px;
+}
+
+.link-item a {
+    color: white;
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-size: 20px;
+    text-decoration: none;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+}
+.content h3{
+    margin-top: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.mid-img{
+    margin: auto;
+    text-align: center;
+    width: 60%;
+}
+.mid-img img{
+    width: 100%;
+}
+
+
+
+
+@media screen and (max-width:750px) {
+
+    nav {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav-menu {
+        margin-top: 9px;
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        right: 10px;
+        transition: all 1s ease;
+    }
+
+    .bar1,
+    .bar2,
+    .bar3 {
+        width: 37px;
+        height: 6px;
+        background-color: white;
+        border-radius: 9px;
+        margin: 5px auto;
+        transition: ease 0.5s;
+    }
+
+    .bar2.bar-style {
+        transform: translate(-50%);
+        opacity: 0;
+
+    }
+
+    .bar1.bar-style {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .bar3.bar-style {
+        transform: rotate(-45deg) translate(6px, -8px);
+    }
+
+    .links ul {
+        background-color: #0479ee;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+        justify-content: space-around;
+        transition: all 1s ease-out;
+    }
+
+    .link-item {
+        margin: 0px auto;
+    }
+
+    .link-item a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .links {
+        right: 0px;
+        width: 100vw;
+        position: absolute;
+        clip-path: circle(10px at 100% -10%);
+        transition: all 0.8s ease-out;
+    }
+
+    .links.style-nav {
+        clip-path: circle(1000px at 100% -10%);
+    }
+
+    .nav-menu.style-menu {
+        transform: rotate(360deg);
+    }
+
+
+
+
+
+
+
+
+}
